@@ -1,3 +1,4 @@
+#coding=utf-8
 import cookielib, urllib, urllib2
 import os
 
@@ -51,12 +52,15 @@ class HttpClient:
       print localPath
       os.mkdir(localPath)
     try:
-      
       filename = os.path.basename(sourceFile)
       localPathFileName = localPath+"/"+filename
-      print filename
-      return urllib.urlretrieve(sourceFile,localPathFileName)
+      if  os.path.exists(localPathFileName):
+        print ".....exists...."
+      else:
+        print filename
+        return urllib.urlretrieve(sourceFile,localPathFileName)
     except Exception as e:
+      print u"文件或者目录出错，请检查"
       return e
 
 #self.__cookie.clear() clean cookie

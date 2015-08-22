@@ -9,7 +9,7 @@ import cookielib
 url = "http://eservice.prlife.com.cn/eservice/account/login.action?action=login"
 cookiejar = cookielib.CookieJar()
 urlOpener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookiejar))
-values = {"username":"zhouxiangqian","password":"123456"}
+values = {"username":"zhou","password":"123456"}
 data = urllib.urlencode(values)
 request = urllib2.Request(url,data)
 #response = urllib2.urlopen(request);
