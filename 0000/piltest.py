@@ -10,5 +10,7 @@ draw = ImageDraw.Draw(im2)
 
 draw.text((width,0),unicode("4",'UTF-8'),font=font)
 im2.show()
+
+
 im2.close()
 im.close()
